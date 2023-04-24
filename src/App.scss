@@ -1,0 +1,132 @@
+ body {
+  padding: 0px;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  font-size: 1.4em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: whitesmoke;
+}
+
+h5 {
+  font-size: 1.4em;
+}
+h6 {
+  font-size: 1.2em;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin:  0px 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #98A0F4;
+
+  &:hover {
+    font-weight: 700;
+    color: #98A0F4;
+  }
+}
+
+.chatbox {
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 1em
+  }
+}
+
+@media (min-width: 998px) and (max-width: 1199px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
+    
+    h4 {
+      font-size: 1em;
+    } 
+     h6 {
+      font-size: .8em
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 997px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    h4 {
+      font-size: .8em;
+    }
+    h6 {
+      font-size: .6em
+    }
+  }
+
+}
+
+@media (min-width: 567px) and (max-width: 767px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h6 {
+    font-size: .8em
+  }
+  
+}
+
+@media (max-width: 566px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h6 {
+    font-size: .8em
+  }
+}
