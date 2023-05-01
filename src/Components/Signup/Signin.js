@@ -4,10 +4,15 @@ import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 import { FcGoogle } from "react-icons/fc"
 import "./Signin.styles.scss"
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector} from "react-redux";
+import { login_user } from '../../Redux/ActionCreator';
+
 
 const SignIn = () => {
 
-  const [ visibilty, setVisibilty ] = useState(false)
+  const dispath = useDispatch();
+  const [ visibilty, setVisibilty ] = useState(false);
+  const [ cred, setCred ] = useState({username: "", password: ""})
   var type;
   if (visibilty === true) {
     type = 'text'
@@ -17,7 +22,8 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log()
+    console.log(cred);
+    dispath(login_user(cred))
   }
   return (
     <div className='signin_card_div d-flex justify-content-center align-items-center'>
@@ -32,11 +38,11 @@ const SignIn = () => {
           <CardBody className='sign_card_body'>
             <Form onSubmit={handleSubmit}>
               <FormGroup className='sign_card_form_group'>
-                <Input type="text" placeholder='username' className='input-input' required/>
+                <Input type="text" placeholder='username' className='input-input' onChange={(e) => {setCred(ans => ({...ans, username: e.target.value}))}} required/>
               </FormGroup>
               <FormGroup className='sign_card_form_group'>
                 <InputGroup className='group_input d-flex align-items-center'>
-                  <Input type={type} placeholder='password' className='input-input1'/>
+                  <Input type={type} placeholder='password' className='input-input1' onChange={(e) => {setCred(ans => ({...ans, password: e.target.value}))}} />
                     { visibilty ? <AiFillEyeInvisible className='close_eye' style={{color: 'grey'}} onClick={() => setVisibilty(false)}/> : <AiFillEye className="open_eye" style={{color: 'grey'}} onClick={() => setVisibilty(true)}/>}
                 </InputGroup>
               </FormGroup>
