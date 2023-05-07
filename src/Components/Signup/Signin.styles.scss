@@ -29,6 +29,9 @@
 
           .input-input {
             border: 1px solid #0d1c2b;
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
 
             &:focus {
               box-shadow: none;
@@ -39,6 +42,9 @@
             border: 1px solid #0d1c2b;
             border-radius: 5px;
             background-color: #E8F0FE;
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
             .input-input1 {
               border: 0px;
 
@@ -56,6 +62,7 @@
         .sign_btn{
           background-color: #E8F0FE;
           color: black;
+          margin-right: 45px;
         }
 
         .google_btn {

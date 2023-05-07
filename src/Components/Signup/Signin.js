@@ -5,12 +5,12 @@ import { FcGoogle } from "react-icons/fc"
 import "./Signin.styles.scss"
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector} from "react-redux";
-import { login_user } from '../../Redux/ActionCreator';
+import { login_user, signin_with_google } from '../../Redux/ActionCreator';
 
 
 const SignIn = () => {
 
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
   const [ visibilty, setVisibilty ] = useState(false);
   const [ cred, setCred ] = useState({username: "", password: ""})
   var type;
@@ -23,7 +23,7 @@ const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(cred);
-    dispath(login_user(cred))
+    dispatch(login_user(cred))
   }
   return (
     <div className='signin_card_div d-flex justify-content-center align-items-center'>
@@ -52,7 +52,7 @@ const SignIn = () => {
             </Form>
             <h4 className='text-center'>Or</h4>
             <div className='d-flex justify-content-center'>
-              <Button className='google_btn'>Sign in with google <span><FcGoogle /></span></Button>
+              <Button className='google_btn' onClick={() => { dispatch(signin_with_google())}}>Sign in with google <span><FcGoogle /></span></Button>
             </div>
             <div className='mt-4'>
               <h4 className='text-center'>No Account? <Link to="/signup" className='link_tag'>Sign Up</Link></h4>

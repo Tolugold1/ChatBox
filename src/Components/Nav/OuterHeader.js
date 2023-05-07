@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { AiOutlineClose } from 'react-icons/ai';
 import { FcMenu } from 'react-icons/fc'
 import "./OuterHeader.styles.scss"
+import { useDispatch } from "react-redux";
+import { logOut } from '../../Redux/ActionCreator';
 
-const OuterHeader = ({logout, clearChat}) => {
+const OuterHeader = ({clearChat}) => {
+  const dispatch = useDispatch();
   const [ open, setOpen ] = useState(false)
   const toggle = () => setOpen(!open);
   return (
@@ -24,7 +27,7 @@ const OuterHeader = ({logout, clearChat}) => {
         <div className=" d-flex justify-content-end">
           <div className="clear_chat" onClick={clearChat}>Clear Chat</div>
           <div className="pipe">|</div>
-          <div className="logOut" onClick={logout}>Logout</div>
+          <div className="logOut" onClick={() => {logOut()}} >Logout</div>
         </div>
       </div>
     </div>
