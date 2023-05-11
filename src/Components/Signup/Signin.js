@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Card, CardBody, Button, Form, Input, FormGroup, InputGroup } from 'reactstrap';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
-import { FcGoogle } from "react-icons/fc"
+import { FcGoogle } from "react-icons/fc";
+import { FaLinkedin } from "react-icons/fa"
 import "./Signin.styles.scss"
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector} from "react-redux";
-import { login_user, signin_with_google } from '../../Redux/ActionCreator';
+import { login_user, signin_with_google, signin_with_linkedin } from '../../Redux/ActionCreator';
 
 
 const SignIn = () => {
@@ -53,6 +54,7 @@ const SignIn = () => {
             <h4 className='text-center'>Or</h4>
             <div className='d-flex justify-content-center'>
               <Button className='google_btn' onClick={() => { dispatch(signin_with_google())}}>Sign in with google <span><FcGoogle /></span></Button>
+              <Button className='linkedin_btn' onClick={() => { dispatch(signin_with_linkedin())}}>Sign in with linkedIn <span><FaLinkedin style={{color: "blue"}} /></span></Button>
             </div>
             <div className='mt-4'>
               <h4 className='text-center'>No Account? <Link to="/signup" className='link_tag'>Sign Up</Link></h4>

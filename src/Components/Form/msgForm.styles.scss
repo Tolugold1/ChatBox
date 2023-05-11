@@ -1,0 +1,42 @@
+.msgForm {
+  bottom: 10px;
+  position: fixed;
+
+
+  .msgform {
+    display: flex;
+    align-self: center;
+
+    .group {
+      
+      .msg_input-input {
+        border: 1px solid #FA5B88;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        width: 50vw;
+        padding: 0px;
+        background-color: #FEF8F8;
+    
+        .input-input {
+          border: 0px;
+          width: 70%;
+          margin-right: auto;
+          margin-left: auto;
+          background-color: #FEF8F8;
+          border-radius: 10px;
+    
+          &:focus {
+            box-shadow: none;
+          }
+        }
+    
+        .send_icon {
+          height: 30px;
+          width: 30px;
+          color: #0D1B2A;
+        }
+      }
+    }
+  }
+}
